@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layanan - Nasi Uduk Nyak Resink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8e1;
+      color: #4a3e1b;
+    }
+
+    header {
+      background-color: #000;
+      color: white;
+      padding: 15px 0;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .navbar-brand {
+      font-family: 'Georgia', serif;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .navbar-nav {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar-nav li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .navbar-nav li a:hover {
+      color: #ff8800;
+    }
+
+    .banner {
+      background: url('https://images.unsplash.com/photo-1626082891395-5c634fb9186f?auto=format&fit=crop&w=1400&q=80') center center/cover no-repeat;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff8e1;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px #663300cc;
+      font-family: 'Georgia', serif;
+    }
+    .banner {
+            background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1350&q=80') center center/cover no-repeat;
+            height: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 42px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+    .layanan-section {
+      background-color: #fff3d6;
+      padding: 60px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgb(255 136 0 / 0.2);
+      max-width: 1100px;
+      margin: 60px auto;
+    }
+
+    .layanan-section h2 {
+      text-align: center;
+      font-size: 30px;
+      color: #ff8800;
+      font-family: 'Georgia', serif;
+      margin-bottom: 40px;
+    }
+
+    .layanan-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .layanan-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      border: 2px solid #ffd966;
+      box-shadow: 0 8px 15px rgba(255, 136, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .layanan-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .layanan-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #ff8800;
+    }
+
+    .layanan-card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #4a3e1b;
+      font-family: 'Georgia', serif;
+    }
+
+    .layanan-card p {
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #111;
+      color: #eee;
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #ff8800;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      font-size: 14px;
+      color: #eee;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    .sponsor-section {
+  background-color: #fff8e1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sponsor-section h3 {
+  font-family: 'Georgia', serif;
+  color: #ff8800;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;    
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;         
+}
+
+.sponsor-logos img {
+  max-height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+  </style>
+</head>
+<body>
+
+ 
+  <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">NASI UDUK NYAK RESINK</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/tentang.html">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/kontak.html">Kontak</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/menu.html">Menu</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/pages/service.html">Service</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  
+</header>
+    <section class="banner">
+        Contact US
+    </section>
+
+
+  <section class="layanan-section">
+    <h2>Layanan Terbaik Kami</h2>
+    <div class="layanan-grid">
+      <div class="layanan-card">
+        <div class="layanan-icon">🍛</div>
+        <h3>Paket Nasi Uduk</h3>
+        <p>Berbagai pilihan paket nasi uduk lengkap dengan lauk khas Betawi.</p>
+      </div>
+      <div class="layanan-card">
+        <div class="layanan-icon">🚚</div>
+        <h3>Layanan Pesan Antar</h3>
+        <p>Kami antar langsung ke rumah atau kantor Anda dengan aman dan hangat.</p>
+      </div>
+      <div class="layanan-card">
+        <div class="layanan-icon">👨‍🍳</div>
+        <h3>Catering Acara</h3>
+        <p>Catering untuk hajatan, syukuran, kantor, dan acara lainnya.</p>
+      </div>
+      <div class="layanan-card">
+        <div class="layanan-icon">📦</div>
+        <h3>Paket Spesial Harian</h3>
+        <p>Paket hemat harian untuk makan siang atau malam, cocok untuk anak kos!</p>
+      </div>
+      <div class="layanan-card">
+        <div class="layanan-icon">💬</div>
+        <h3>Konsultasi Menu</h3>
+        <p>Konsultasi kebutuhan menu spesial sesuai selera dan budget Anda.</p>
+      </div>
+      <div class="layanan-card">
+        <div class="layanan-icon">📍</div>
+        <h3>Layanan Ambil Sendiri</h3>
+        <p>Pesan online, lalu ambil langsung di lokasi tanpa harus antre lama.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sponsor-section">
+  <h3>Didukung oleh Partner Kami</h3>
+  <div class="sponsor-logos">
+    <img src="/assets/img/landing.png" alt="Sponsor 1">
+    <img src="sponsor2.png" alt="Sponsor 2">
+    <img src="sponsor3.png" alt="Sponsor 3">
+    <img src="sponsor4.png" alt="Sponsor 4">
+  </div>
+</section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Consulting</h4>
+                <p>+554 1234 1234</p>
+                <p>consulting@example.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Location</h4>
+                <ul>
+                    <li><a href="#">Jakarta</a></li>
+                    <li><a href="#">Bandung</a></li>
+                    <li><a href="#">Surabaya</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Location</h4>
+                <p>Jl. Betawi No. 88</p>
+                <p>Jakarta Selatan</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Nasi Uduk Nyak Resink. All rights reserved.
+        </div>
+    </footer>
